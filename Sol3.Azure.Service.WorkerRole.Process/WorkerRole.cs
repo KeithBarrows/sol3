@@ -26,6 +26,7 @@ namespace Sol3.Azure.Service.WorkerRole.Process
             finally
             {
                 this._runCompleteEvent.Set();
+
             }
         }
 
