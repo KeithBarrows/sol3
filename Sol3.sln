@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sol3.Infrastructure.Pattern
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sol3.Infrastructure", "Sol3.Infrastructure.Logging\Sol3.Infrastructure.csproj", "{993F563A-8820-42FE-88FE-FBE2CB3EE044}"
 EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "Sol3.Azure.Service", "Sol3.Azure.Service\Sol3.Azure.Service.ccproj", "{6B8E432D-6A4E-48B0-97C0-5D5CD72E6DA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sol3.Azure.Service.WorkerRole.Process", "Sol3.Azure.Service.WorkerRole.Process\Sol3.Azure.Service.WorkerRole.Process.csproj", "{8BE872E8-7412-4E0A-9D12-6416898C850E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{993F563A-8820-42FE-88FE-FBE2CB3EE044}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{993F563A-8820-42FE-88FE-FBE2CB3EE044}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{993F563A-8820-42FE-88FE-FBE2CB3EE044}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B8E432D-6A4E-48B0-97C0-5D5CD72E6DA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B8E432D-6A4E-48B0-97C0-5D5CD72E6DA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B8E432D-6A4E-48B0-97C0-5D5CD72E6DA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B8E432D-6A4E-48B0-97C0-5D5CD72E6DA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BE872E8-7412-4E0A-9D12-6416898C850E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BE872E8-7412-4E0A-9D12-6416898C850E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BE872E8-7412-4E0A-9D12-6416898C850E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BE872E8-7412-4E0A-9D12-6416898C850E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
