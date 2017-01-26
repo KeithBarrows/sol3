@@ -4,7 +4,7 @@ My main repository
 Welcome to Sol3: Sol is latin for sun, 3 is the placement of the Earth from the sun!  
 More details on the [Wiki](https://github.com/KeithBarrows/Sol3/wiki)
 
-[Experiment in Github pages.](https://keithbarrows.github.io/CreationsByKittery/)
+[Experiment in Github pages.](https://keithbarrows.github.io/Sol3/)
 
 This is my sandbox to explore, among other things, the following.  
 * [Feature folders](http://timgthomas.com/2013/10/feature-folders-in-asp-net-mvc/) in an MVC app
