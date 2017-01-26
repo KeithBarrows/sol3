@@ -12,6 +12,7 @@
     <AssemblyName>Sol3.Azure.Service</AssemblyName>
     <StartDevelopmentStorage>True</StartDevelopmentStorage>
     <Name>Sol3.Azure.Service</Name>
+    <UseWebProjectPorts>False</UseWebProjectPorts>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
