@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Owin;
+﻿using Owin;
 
 namespace Sol3.Azure.Service.WorkerRole.Process.Startup
 {
-    public class Startup
+    public partial class Startup
     {
-        public void Configuration(IAppBuilder app)
+        public void Configuration(IAppBuilder appBuilder)
         {
-            app.UseWelcomePage("/");
+            RegisterKatana(appBuilder);
         }
     }
 }
