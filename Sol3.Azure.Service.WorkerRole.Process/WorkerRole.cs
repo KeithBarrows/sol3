@@ -56,11 +56,15 @@ namespace Sol3.Azure.Service.WorkerRole.Process
 
             Trace.TraceInformation($"Starting OWIN at {baseUri}", "Information");
 
+            // TODO:  Add hangfire startup
             _app = WebApp.Start<Startup.Startup>(new StartOptions(url: baseUri));
 
             var result = base.OnStart();
 
             Trace.TraceInformation("Sol3.Azure.Service.WorkerRole.Process has been started");
+
+            // TODO:  Check for/add Sunset job.  If sunset > today's time, set job for today, else tomorrow
+
 
             Log.Logger.Information("[WorkerRole] OnStart Complete");
             return result;

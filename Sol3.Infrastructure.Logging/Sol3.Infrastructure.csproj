@@ -108,7 +108,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\SunriseSunset\Handler.cs" />
+    <Compile Include="Api\SunriseSunset\Models\ModelLocalResults.cs" />
+    <Compile Include="Api\SunriseSunset\Models\Request.cs" />
+    <Compile Include="Api\SunriseSunset\Models\Response.cs" />
+    <Compile Include="Api\SunriseSunset\Models\ModelResults.cs" />
     <Compile Include="Extensions\DataTypeExtensions.cs" />
+    <Compile Include="Extensions\HttpExtensions.cs" />
     <Compile Include="Logging\ForSerilog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

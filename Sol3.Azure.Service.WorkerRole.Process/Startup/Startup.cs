@@ -7,6 +7,7 @@ namespace Sol3.Azure.Service.WorkerRole.Process.Startup
         public void Configuration(IAppBuilder appBuilder)
         {
             RegisterKatana(appBuilder);
+            RegisterHangfire(appBuilder);
         }
     }
 }

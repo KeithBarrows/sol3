@@ -1,4 +1,6 @@
-﻿using System.Web.Http;
+﻿using System.Linq;
+using System.Net.Http.Headers;
+using System.Web.Http;
 using Microsoft.Owin.Diagnostics;
 using Owin;
 using Serilog;
@@ -27,6 +29,12 @@ namespace Sol3.Azure.Service.WorkerRole.Process.Startup
             appBuilder.UseWelcomePage("/");
             appBuilder.UseErrorPage(ErrorPageOptions.ShowAll);
 
+            //var appXmlType = config.Formatters.XmlFormatter.SupportedMediaTypes.FirstOrDefault(t => t.MediaType == "application/xml");
+            //config.Formatters.XmlFormatter.SupportedMediaTypes.Remove(appXmlType);
+
+            //config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
+
+            //config.Formatters.Add(new BrowserJsonFormatter());
 
             Log.Logger.Information("[STARTUP] RegisterKatana Complete");
         }

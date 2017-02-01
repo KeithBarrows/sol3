@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Http;
+using Newtonsoft.Json;
 using Serilog;
-using Sol3.Infrastructure.Extensions;
+using Sol3.Infrastructure.Api.SunriseSunset;
 
 namespace Sol3.Azure.Service.WorkerRole.Process.Feature.Api
 {
@@ -16,7 +13,13 @@ namespace Sol3.Azure.Service.WorkerRole.Process.Feature.Api
         [Route("")]
         public string Get()
         {
-            return "GET IS COMPLETE!";
+            var targetDay = DateTime.Today.AddDays(1);
+            var sunriseSunsetHandler = new Handler();
+            sunriseSunsetHandler.ExecuteRequest(40.1175836, -104.9684357, targetDay);
+
+            Log.Logger.Debug("Hit Sunrise/Sunset API: {@results}", sunriseSunsetHandler);
+
+            return JsonConvert.SerializeObject(sunriseSunsetHandler);
         }
 
         [HttpGet]

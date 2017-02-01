@@ -58,6 +58,15 @@ namespace Sol3.Infrastructure.Extensions
             return !src.HasValue || src.Equals(Guid.Empty);
         }
 
+        public static int ToInt(this bool src)
+        {
+            return src ? 1 : 0;
+        }
+        public static int ToInt(this bool? src)
+        {
+            return src?.ToInt() ?? 0;
+        }
+
         public static int ToInt(this string src, int? @default = null)
         {
             int ret;

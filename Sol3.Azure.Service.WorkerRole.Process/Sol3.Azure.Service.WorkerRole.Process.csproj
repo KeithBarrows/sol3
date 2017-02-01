@@ -143,12 +143,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppSettings.cs" />
+    <Compile Include="Feature\Api\ApiMakerController.cs" />
     <Compile Include="Feature\Api\ApiWorkerController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup\BrowserJsonFormatter.cs" />
     <Compile Include="Startup\ProgramStartup.Log.cs" />
     <Compile Include="Startup\ProgramStartup.IoC.cs" />
     <Compile Include="Startup\Startup.Auth.cs" />
     <Compile Include="Startup\Startup.cs" />
+    <Compile Include="Startup\Startup.Hangfire.cs" />
     <Compile Include="Startup\Startup.Katana.cs" />
     <Compile Include="WorkerRole.cs" />
   </ItemGroup>
