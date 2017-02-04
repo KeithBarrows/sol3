@@ -36,6 +36,14 @@
       <HintPath>..\packages\FluentValidation.6.2.1.0\lib\Net45\FluentValidation.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Hangfire.Core, Version=1.6.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hangfire.Core.1.6.8\lib\net45\Hangfire.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Hangfire.SqlServer, Version=1.6.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hangfire.SqlServer.1.6.8\lib\net45\Hangfire.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.7\lib\net45-full\log4net.dll</HintPath>
       <Private>True</Private>
@@ -95,7 +103,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
-      <HintPath>..\packages\Serilog.2.3.0\lib\net45\Serilog.dll</HintPath>
+      <HintPath>..\packages\Serilog.2.4.0\lib\net45\Serilog.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Serilog.Sinks.File, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
@@ -160,13 +168,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Sol3.Infrastructure.Logging\Sol3.Infrastructure.csproj">
-      <Project>{993F563A-8820-42FE-88FE-FBE2CB3EE044}</Project>
-      <Name>Sol3.Infrastructure</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sol3.Patterns\Sol3.Infrastructure.Patterns.csproj">
+    <ProjectReference Include="..\Sol3.Infrastructure.Patterns\Sol3.Infrastructure.Patterns.csproj">
       <Project>{E24960DF-365F-469A-A605-90E767A665BC}</Project>
       <Name>Sol3.Infrastructure.Patterns</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sol3.Infrastructure\Sol3.Infrastructure.csproj">
+      <Project>{993F563A-8820-42FE-88FE-FBE2CB3EE044}</Project>
+      <Name>Sol3.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
