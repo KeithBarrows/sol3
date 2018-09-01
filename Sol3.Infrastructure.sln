@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sol3.Infrastructure.Base", "Sol3.Infrastructure.Base\Sol3.Infrastructure.Base.csproj", "{8DAD4A84-DD1E-4F67-B79E-29A7295310FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sol3.Infrastructure.Base", "Sol3.Infrastructure.Base\Sol3.Infrastructure.Base.csproj", "{8DAD4A84-DD1E-4F67-B79E-29A7295310FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sol3.Infrastructure.IoT", "Sol3.Infrastructure.IoT\Sol3.Infrastructure.IoT.csproj", "{87D0D9DB-3282-4DEB-9773-3EA1344C3EAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sol3.Infrastructure.IoT", "Sol3.Infrastructure.IoT\Sol3.Infrastructure.IoT.csproj", "{87D0D9DB-3282-4DEB-9773-3EA1344C3EAF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7A602373-698A-42A6-A1E0-249E5BA5DDCB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sol3.Infrastructure.Core", "Sol3.Infrastructure.Core\Sol3.Infrastructure.Core.csproj", "{7E828D59-3CC7-4349-A436-CCB82B3AEFF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sol3.TestCli", "Sol3.TestCli\Sol3.TestCli.csproj", "{7045BDF0-2784-47E1-827C-AB4FA509C257}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +25,10 @@ Global
 		{87D0D9DB-3282-4DEB-9773-3EA1344C3EAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87D0D9DB-3282-4DEB-9773-3EA1344C3EAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87D0D9DB-3282-4DEB-9773-3EA1344C3EAF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7E828D59-3CC7-4349-A436-CCB82B3AEFF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7E828D59-3CC7-4349-A436-CCB82B3AEFF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7E828D59-3CC7-4349-A436-CCB82B3AEFF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7E828D59-3CC7-4349-A436-CCB82B3AEFF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7045BDF0-2784-47E1-827C-AB4FA509C257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7045BDF0-2784-47E1-827C-AB4FA509C257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7045BDF0-2784-47E1-827C-AB4FA509C257}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7045BDF0-2784-47E1-827C-AB4FA509C257}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
