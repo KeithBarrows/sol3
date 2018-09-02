@@ -33,5 +33,31 @@ namespace Sol3.Infrastructure.Base.Configuration
             
             return configuration;
         }
+        public static IConfigurationRoot InitializeConfiguration()
+        {
+            var dir = Directory.GetCurrentDirectory();
+
+            var globalbuilder = new ConfigurationBuilder()
+                .SetBasePath(dir)
+                .AddJsonFile("globalconfig.json");
+            var globalConfiguration = globalbuilder.Build();
+
+            var stagingEnvironment = globalConfiguration["StagingEnvironment"] ?? "development";
+            var hasAppSettings = globalConfiguration["HasAppSettings"].ToBool();
+
+            var builder = new ConfigurationBuilder();
+
+            if(hasAppSettings)
+                builder.SetBasePath(Directory.GetCurrentDirectory())
+                    .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                    .AddJsonFile($"appsettings.{stagingEnvironment}.json", optional: true, reloadOnChange: true);
+
+            // if (stagingEnvironment.Equals("Development", StringComparison.CurrentCultureIgnoreCase))
+            //     builder.AddUserSecrets();
+
+            var configuration = builder.Build();
+            
+            return configuration;
+        }
     }
 }
