@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Sol3.Infrastructure.Patterns.Creational
 {

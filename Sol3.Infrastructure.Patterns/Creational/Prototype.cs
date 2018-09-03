@@ -1,4 +1,4 @@
-﻿namespace Sol3.Infrastructure.Patterns.Creational
+namespace Sol3.Infrastructure.Patterns.Creational
 {
     public abstract class Prototype
     {
