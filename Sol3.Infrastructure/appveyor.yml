@@ -5,7 +5,6 @@ configuration: Release
 init:
   # Best practice (Windows line endings different to Unix/Linux)
   - cmd: git config --global core.autocrlf true
-  - cmd: cd Sol3.Infrastructure
 
 install:
   appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/v4.0.0/nuget.exe
@@ -16,10 +15,11 @@ before_build:
   # Display minimal restore text
   - cmd: dotnet restore Sol3.Infrastructure.csproj --verbosity m
 
-build:
-  project: Sol3.Infrastructure.csproj
+#build:
+#  project: Sol3.Infrastructure.csproj
 
 build_script:
+  - cmd: cd Sol3.Infrastructure
   - cmd: dotnet build Sol3.Infrastructure.csproj
   - cmd: dotnet pack  -c Release /p:PackageVersion=0.0.{build} 
 
