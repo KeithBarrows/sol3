@@ -16,7 +16,7 @@ before_build:
   - cmd: dotnet restore ./Sol3.Infrastructure/Sol3.Infrastructure.csproj --verbosity m
 
 build_script:
-  - cmd: dotnet build ./Sol3.Infrastructure/Sol3.Infrastructure.csproj
+  - cmd: dotnet build Sol3.Infrastructure/Sol3.Infrastructure.csproj
   - cmd: dotnet pack  -c Release /p:PackageVersion=0.0.{build} 
 
 notifications:
