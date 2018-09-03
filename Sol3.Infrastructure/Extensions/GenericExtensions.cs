@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Sol3.Infrastructure.Base.Extensions
+namespace Sol3.Infrastructure.Extensions
 {
     public static class GenericExtensions
     {
