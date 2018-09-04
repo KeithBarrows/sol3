@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Sol3.Infrastructure.Base.Extensions
+namespace Sol3.Infrastructure.Extensions
 {
     public static class IntExtensions
     {

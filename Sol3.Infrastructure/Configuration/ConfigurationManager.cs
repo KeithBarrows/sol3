@@ -1,9 +1,9 @@
 ﻿using System;
 using System.IO;
 using Microsoft.Extensions.Configuration;
-using Sol3.Infrastructure.Base.Extensions;
+using Sol3.Infrastructure.Extensions;
 
-namespace Sol3.Infrastructure.Base.Configuration
+namespace Sol3.Infrastructure.Configuration
 {
     public static class ConfigurationManager
     {

@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
+            "label": "build_testcli",
             "command": "dotnet",
             "type": "process",
             "args": [
@@ -10,6 +10,27 @@
                 "${workspaceFolder}/Sol3.TestCli/Sol3.TestCli.csproj"
             ],
             "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "nuget-publish",
+            "type": "shell",
+            "osx": {
+                "command": "bash ./scripts/project-tasks.sh nugetPublish"
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "dedicated"
+            },
+            "problemMatcher": [],
+            "windows": {
+                "command": ".\\scripts\\project-tasks.ps1 -NugetPublish"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }

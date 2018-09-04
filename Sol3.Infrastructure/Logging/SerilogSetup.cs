@@ -2,15 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Sol3.Infrastructure.Base.Configuration;
-using Sol3.Infrastructure.Base.Extensions;
+using Sol3.Infrastructure.Configuration;
+using Sol3.Infrastructure.Extensions;
 using Microsoft.Extensions.Configuration;
 using Serilog;
 using Serilog.Events;
 using Serilog.Formatting.Json;
 using Serilog.Sinks.SystemConsole.Themes;
 
-namespace Sol3.Infrastructure.Base.Logging
+namespace Sol3.Infrastructure.Logging
 {
     public static class SerilogSetup
     {

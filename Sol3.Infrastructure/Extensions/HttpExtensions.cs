@@ -6,7 +6,7 @@ using System.Net.Http.Headers;
 using System.Threading;
 using Newtonsoft.Json;
 
-namespace Sol3.Infrastructure.Base.Extensions
+namespace Sol3.Infrastructure.Extensions
 {
     public static class HttpExtensions
     {
