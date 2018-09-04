@@ -1,6 +1,17 @@
 version: '0.0.{build}'
 image: Visual Studio 2017
 configuration: Release
+build: off
+
+notifications:
+- provider: Email
+  to:
+  - keith@sol3.net
+  subject: CI build 0.0.{build} failed!
+  on_build_success: false
+  on_build_failure: true
+  on_build_status_changed: false
+
 
 init:
   # Best practice (Windows line endings different to Unix/Linux)
@@ -12,34 +23,21 @@ install:
 before_build:
   # Display .NET Core version
   - cmd: dotnet --version
+  # Change to specific project folder
+  - cmd: cd Sol3.Infrastructure
   # Display minimal restore text
   - cmd: dotnet restore Sol3.Infrastructure.csproj --verbosity m
 
-#build:
-#  project: Sol3.Infrastructure.csproj
-
 build_script:
-  - cmd: cd Sol3.Infrastructure
   - cmd: dotnet build Sol3.Infrastructure.csproj
-  - cmd: dotnet pack  -c Release /p:PackageVersion=0.0.{build} 
+  - cmd: dotnet pack -c Release /p:PackageVersion=0.0.{build} 
 
-notifications:
-- provider: Email
-  to:
-  - keith@sol3.net
-  subject: Latest CI build failed!
-  on_build_success: false
-  on_build_failure: true
-  on_build_status_changed: false
-
-artifacts:
-
-deploy:
-  provider: NuGet
-  server: https://keithbarrows.pkgs.visualstudio.com/_packaging/packages/nuget/v3/index.json
-  api_key:
-    secure: og20mPRme2B1liUL1znQvg==
-  skip_symbols: true
+# deploy:
+#   provider: NuGet
+#   server: https://keithbarrows.pkgs.visualstudio.com/_packaging/packages/nuget/v3/index.json
+#   api_key:
+#     secure: og20mPRme2B1liUL1znQvg==
+#   skip_symbols: true
 
 after_build:
   # For once the build has completed
