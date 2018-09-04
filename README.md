@@ -1,4 +1,4 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/2pt0ki1d0x50eg7w/branch/master?svg=true)](https://ci.appveyor.com/project/KeithBarrows/sol3/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/1u000nf6ednke6b5/branch/master?svg=true)](https://ci.appveyor.com/project/KeithBarrows/sol3/branch/master)
 
 # sol3
 My main repository
