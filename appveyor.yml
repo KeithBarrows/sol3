@@ -1,10 +1,13 @@
+###
+### https://www.appveyor.com/docs/appveyor-yml/
+###
+
 version: 0.0.{build}
 branches:
   only:
   - master
 image: Visual Studio 2017
 configuration: Release
-
 notifications:
 - provider: Email
   to:
@@ -13,39 +16,30 @@ notifications:
   on_build_success: false
   on_build_failure: true
   on_build_status_changed: false
-
 clone_folder: C:\sol3
-
 environment:
   build: '{build}'
   matrix:
   - project_name: Sol3.Infrastructure
   - project_name: Sol3.Infrastructure.IoT
   - project_name: Sol3.TestCli
-
 nuget:
   account_feed: true
   project_feed: true
-
 build:
   verbosity: normal
-
 build_script:
 - pwsh: >-
-    Write-Host "---==[ BEFORE BUILD" $env:project_name $env:APPVEYOR_BUILD_VERSION "SCRIPT ]==---"  
+    Write-Host "---==[ BEFORE BUILD" $env:project_name $env:APPVEYOR_BUILD_VERSION "SCRIPT ]==---"
     dotnet --version
     Set-Location .\$env:project_name
-    dotnet restore
-    Write-Host ""
-
-    Write-Host "---==[ BUILD" $env:project_name $env:APPVEYOR_BUILD_VERSION "SCRIPT ]==---"  
-    dotnet build
-    Write-Host ""
-
-    Write-Host "---==[ AFTER BUILD" $env:project_name $env:APPVEYOR_BUILD_VERSION "SCRIPT ]==---"  
-    if($env:project_name -ilike "sol3.infrastructure*")  
-    {  
-        dotnet pack --no-build /p:PackageVersion=$env:APPVEYOR_BUILD_VERSION
+    dotnet restore --verbosity normal
+    Write-Host "---==[ BUILD" $env:project_name $env:APPVEYOR_BUILD_VERSION "SCRIPT ]==---"
+    dotnet build --verbosity normal
+    Write-Host "---==[ AFTER BUILD" $env:project_name $env:APPVEYOR_BUILD_VERSION "SCRIPT ]==---"
+    if($env:project_name -ilike "sol3.infrastructure*")
+    {
+        dotnet pack --no-build /p:PackageVersion=$env:APPVEYOR_BUILD_VERSION --verbosity normal
         nuget push .\bin\release\$env:project_name.$env:APPVEYOR_BUILD_VERSION.nupkg -ApiKey gnsob4ooc2th7pjtxx7yqflr -Source https://ci.appveyor.com/nuget/keithbarrows/api/v2/package
     }
     Set-Location ..
