@@ -31,6 +31,8 @@ nuget:
 build_script:
 - pwsh: >-
     Set-Location .\$env:project_name
+
     ./build.ps1
+
     Set-Location ..
 deploy: off
