@@ -17,8 +17,7 @@ if($env:project_name -ilike "sol3.infrastructure*")
 {  
     dotnet pack --no-build /p:PackageVersion=$env:APPVEYOR_BUILD_VERSION
     Set-Location .\bin\release
-    Get-ChildItem
-    Write-Host "nuget push $env:project_name.$env:APPVEYOR_BUILD_VERSION.nupkg -ApiKey gnsob4ooc2th7pjtxx7yqflr -Source https://ci.appveyor.com/nuget/keithbarrows/api/v2/package"
+    nuget push $env:project_name.$env:APPVEYOR_BUILD_VERSION.nupkg -ApiKey gnsob4ooc2th7pjtxx7yqflr -Source https://ci.appveyor.com/nuget/keithbarrows/api/v2/package
     Set-Location ../..
 }
 Set-Location ..
