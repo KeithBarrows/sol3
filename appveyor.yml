@@ -3,6 +3,8 @@
 ###
 
 version: 0.0.{build}
+init:
+- cmd: git config --global core.autocrlf true
 branches:
   only:
   - master
@@ -26,8 +28,9 @@ environment:
 nuget:
   account_feed: true
   project_feed: true
-build:
-  verbosity: normal
 build_script:
-- pwsh: .\$env:project_name\build.ps1
+- pwsh: >-
+    Set-Location .\$env:project_name
+    ./build.ps1
+    Set-Location ..
 deploy: off
