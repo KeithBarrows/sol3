@@ -1,4 +1,4 @@
-#########################################################################################
+########################################################################################
 Write-Host "---==[ BEFORE BUILD" $env:project_name "SCRIPT ]==---"  
 Write-Host "Build Number:" $env:APPVEYOR_BUILD_NUMBER
 Write-Host "Build Version:" $env:APPVEYOR_BUILD_VERSION
@@ -7,11 +7,11 @@ Set-Location .\$env:project_name
 Get-ChildItem
 dotnet restore ###$env:project_name/$env:project_name.csproj
 Write-Host ""
-#########################################################################################
+########################################################################################
 Write-Host "---==[ BUILD" $env:project_name "SCRIPT ]==---"  
 dotnet build ###$env:project_name/$env:project_name.csproj -c Release
 Write-Host ""
-#########################################################################################
+########################################################################################
 Write-Host "---==[ AFTER BUILD" $env:project_name "SCRIPT ]==---"  
 if($env:project_name -ilike "sol3.infrastructure*")  
 {  
@@ -21,4 +21,4 @@ if($env:project_name -ilike "sol3.infrastructure*")
     Set-Location ../..
 }
 Set-Location ..
-#########################################################################################
+########################################################################################
