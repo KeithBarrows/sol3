@@ -9,7 +9,11 @@
                 "build",
                 "${workspaceFolder}/Sol3.Infrastructure/Sol3.Infrastructure.csproj"
             ],
-            "problemMatcher": "$msCompile"
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         },
         {
             "label": "build_sol3_infrastructure_iot",
@@ -19,7 +23,11 @@
                 "build",
                 "${workspaceFolder}/Sol3.Infrastructure.IoT/Sol3.Infrastructure.IoT.csproj"
             ],
-            "problemMatcher": "$msCompile"
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         },
         {
             "label": "build_testcli",
@@ -29,7 +37,11 @@
                 "build",
                 "${workspaceFolder}/Sol3.TestCli/Sol3.TestCli.csproj"
             ],
-            "problemMatcher": "$msCompile"
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
