@@ -2,6 +2,26 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "build_sol3_infrastructure",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/Sol3.Infrastructure/Sol3.Infrastructure.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build_sol3_infrastructure_iot",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/Sol3.Infrastructure.IoT/Sol3.Infrastructure.IoT.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
             "label": "build_testcli",
             "command": "dotnet",
             "type": "process",
@@ -10,27 +30,6 @@
                 "${workspaceFolder}/Sol3.TestCli/Sol3.TestCli.csproj"
             ],
             "problemMatcher": "$msCompile"
-        },
-        {
-            "label": "nuget-publish",
-            "type": "shell",
-            "osx": {
-                "command": "bash ./scripts/project-tasks.sh nugetPublish"
-            },
-            "presentation": {
-                "echo": true,
-                "reveal": "always",
-                "focus": true,
-                "panel": "dedicated"
-            },
-            "problemMatcher": [],
-            "windows": {
-                "command": ".\\scripts\\project-tasks.ps1 -NugetPublish"
-            },
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
         }
     ]
 }
