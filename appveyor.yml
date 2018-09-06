@@ -35,4 +35,6 @@ build_script:
     ./build.ps1
 
     Set-Location ..
+artifacts:
+- path: '*/.nupkg'
 deploy: off
