@@ -4,6 +4,7 @@ using DarkSky.Models;
 using DarkSky.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Sol3.Infrastructure.Extensions;
 using Sol3.Infrastructure.IoT.Weather.Models;
 
 namespace Sol3.Infrastructure.IoT.Weather
@@ -23,6 +24,18 @@ namespace Sol3.Infrastructure.IoT.Weather
             config.Bind("Locations", _locations);
         }
 
+        public SunriseSunset GetSunriseSunset(Location location, DateTime dateTime)
+        {
+            var forecast = _darkSkyService.GetForecast(location.Latitude, location.Longitude, new DarkSkyService.OptionalParameters
+            {
+                ForecastDateTime = dateTime,
+            });
+            return new SunriseSunset {
+                Sunrise = forecast.Result.Response.Daily.Data[0].SunriseDateTime.ToDateTimeOffset(),
+                Sunset = forecast.Result.Response.Daily.Data[0].SunsetDateTime.ToDateTimeOffset()
+            };
+            
+        }
         public Forecast GetToday(Location location)
         {
             return GetToday(location.Latitude, location.Longitude);
