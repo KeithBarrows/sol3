@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Sol3.Infrastructure.Base.Configuration;
+using Sol3.Infrastructure.Configuration;
 using Sol3.Infrastructure.IoT.Weather.Models;
 
 namespace Sol3.TestCli

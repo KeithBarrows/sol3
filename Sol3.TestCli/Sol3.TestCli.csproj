@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Sol3.Infrastructure.Base\Sol3.Infrastructure.Base.csproj" />
+    <ProjectReference Include="..\Sol3.Infrastructure\Sol3.Infrastructure.csproj" />
     <ProjectReference Include="..\Sol3.Infrastructure.IoT\Sol3.Infrastructure.IoT.csproj" />
   </ItemGroup>
 
