@@ -42,6 +42,20 @@
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "build_web",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/Sol3.net/Sol3.net.csproj"
+            ],
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
