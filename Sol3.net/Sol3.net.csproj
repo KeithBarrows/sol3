@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>d81082d3-84d5-49aa-865d-5dc14d2e33d7</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sol3.Infrastructure.IoT\Sol3.Infrastructure.IoT.csproj" />
+    <ProjectReference Include="..\Sol3.Infrastructure.Web\Sol3.Infrastructure.Web.csproj" />
+    <ProjectReference Include="..\Sol3.Infrastructure\Sol3.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>
