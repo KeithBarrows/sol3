@@ -30,7 +30,6 @@ namespace Sol3.Infrastructure.Configuration
                 builder.AddUserSecrets<T>();
 
             var configuration = builder.Build();
-
             return configuration;
         }
         public static IConfigurationRoot InitializeConfiguration()
@@ -56,7 +55,6 @@ namespace Sol3.Infrastructure.Configuration
             //     builder.AddUserSecrets();
 
             var configuration = builder.Build();
-
             return configuration;
         }
     }

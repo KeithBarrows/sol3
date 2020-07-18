@@ -68,7 +68,6 @@ namespace Sol3.Infrastructure.Extensions
             throw new ArgumentException($"The value passed in [{src}] cannot be converted to a valid INT and there was no default defined!");
         }
 
-
         public static string AllowedText(this string src, Dictionary<int, string> allowed)
         {
             if (src.IsInt() && allowed.ContainsKey(src.ToInt()))

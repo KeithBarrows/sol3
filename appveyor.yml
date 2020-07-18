@@ -1,0 +1,40 @@
+###
+### https://www.appveyor.com/docs/appveyor-yml/
+###
+
+version: 0.0.{build}
+init:
+- cmd: git config --global core.autocrlf true
+branches:
+  only:
+  - master
+image: Visual Studio 2017
+configuration: Release
+notifications:
+- provider: Email
+  to:
+  - keith+build@sol3.net
+  subject: CI build 0.0.{build} failed!
+  on_build_success: false
+  on_build_failure: true
+  on_build_status_changed: false
+clone_folder: C:\sol3
+environment:
+  build: '{build}'
+  matrix:
+  - project_name: Sol3.Infrastructure
+  - project_name: Sol3.Infrastructure.IoT
+  - project_name: Sol3.TestCli
+nuget:
+  account_feed: true
+  project_feed: true
+build_script:
+- pwsh: >-
+    Set-Location .\$env:project_name
+
+    ./build.ps1
+
+    Set-Location ..
+artifacts:
+- path: '*/.nupkg'
+deploy: off
