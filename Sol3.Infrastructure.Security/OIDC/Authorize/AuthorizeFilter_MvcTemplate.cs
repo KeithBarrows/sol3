@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Diagnostics;
 using System.Web.Mvc;
 
 namespace Sol3.Infrastructure.Security.OIDC.Authorize
 {
-    public class AuthorizeFilter_MvcTemplate : ActionFilterAttribute, IAuthorizationFilter
+    public class AuthorizeFilter_MvcTemplate : AuthorizeAttribute, IAuthorizationFilter
     {
-        public void OnAuthorization(AuthorizationContext filterContext)
+        public override void OnAuthorization(AuthorizationContext filterContext)
         {
-            throw new NotImplementedException();
+            Debug.WriteLine("OnAuthorization");
         }
     }
 }
