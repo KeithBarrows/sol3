@@ -22,9 +22,9 @@ clone_folder: C:\sol3
 environment:
   build: '{build}'
   matrix:
-  - project_name: Sol3.Standard.Infrastructure
-  - project_name: Sol3.Core.Infrastructure
-  - project_name: Sol3.Framework.Infrastructure
+  - project_name: C:\sol3\src\Standard\Sol3.Standard.Infrastructure
+  - project_name: C:\sol3\src\Core\Sol3.Core.Infrastructure
+  - project_name: C:\sol3\src\Framework\Sol3.Framework.Infrastructure
 nuget:
   account_feed: true
   project_feed: true
@@ -34,7 +34,7 @@ build_script:
 
     ./build.ps1
 
-    Set-Location ..
+    Set-Location C:\sol3
 artifacts:
 - path: '*/.nupkg'
 deploy: off
