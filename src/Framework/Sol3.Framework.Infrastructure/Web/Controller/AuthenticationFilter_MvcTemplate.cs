@@ -8,7 +8,7 @@ namespace Sol3.Framework.Infrastructure.Web.Controller
     {
         public void OnAuthentication(AuthenticationContext filterContext)
         {
-            Log.Information("", filterContext.Controller, filterContext.ActionDescriptor, filterContext.Principal.Identity);
+            Log.Debug("", filterContext.Controller, filterContext.ActionDescriptor, filterContext.Principal.Identity);
 
             if (!filterContext.Principal.Identity.IsAuthenticated)
                 filterContext.Result = new HttpUnauthorizedResult();
@@ -16,7 +16,7 @@ namespace Sol3.Framework.Infrastructure.Web.Controller
 
         public void OnAuthenticationChallenge(AuthenticationChallengeContext filterContext)
         {
-            Log.Information("", filterContext.Controller, filterContext.ActionDescriptor, filterContext.DisplayMode);
+            Log.Debug("", filterContext.Controller, filterContext.ActionDescriptor, filterContext.DisplayMode);
         }
     }
 }

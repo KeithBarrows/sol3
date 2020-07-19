@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
-using Sol3.Framework.Infrastructure.Extensions;
-using Sol3.Framework.Infrastructure.Pattern;
+using Sol3.Standard.Infrastructure.Extensions;
+using Sol3.Standard.Infrastructure.Pattern.Creational;
 using System;
 using System.Collections.Generic;
 using System.Runtime.Caching;
@@ -30,7 +30,7 @@ namespace Sol3.Framework.Infrastructure.Configuration
         public Config()
         {
             ContentRootPath = AppInfo.Instance.ContentRootPath;
-            _appSettings = AppSettingsJson.GetAppSettings(ContentRootPath);
+            //_appSettings = AppSettingsJson.GetAppSettings(ContentRootPath);
 
             _cache = MemoryCache.Default;
             _cacheItemPolicy = new CacheItemPolicy { AbsoluteExpiration = DateTimeOffset.Now.AddMinutes(CacheExpireMinutes) };

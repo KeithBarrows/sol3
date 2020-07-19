@@ -1,8 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
-using Sol3.Core.Infrastructure.Extensions;
-using Sol3.Core.Infrastructure.Pattern;
+using Sol3.Standard.Infrastructure.Extensions;
+using Sol3.Standard.Infrastructure.Pattern.Creational;
 using System;
-using System.Collections.Generic;
 using System.Runtime.Caching;
 
 namespace Sol3.Core.Infrastructure.Configuration

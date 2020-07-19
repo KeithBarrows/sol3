@@ -1,7 +1,7 @@
-﻿//using Microsoft.AspNetCore.Http;
-//using Serilog;
+﻿//using Serilog;
 //using Serilog.Events;
 //using System;
+//using System.Web;
 
 //namespace Sol3.Core.Infrastructure.Logging
 //{

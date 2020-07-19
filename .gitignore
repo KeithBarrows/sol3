@@ -19,6 +19,7 @@ artifacts/
 *.zip
 *.dll
 *.exe
+src_archive/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs

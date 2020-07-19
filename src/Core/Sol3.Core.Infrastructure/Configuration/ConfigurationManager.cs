@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
-using Sol3.Core.Infrastructure.Extensions;
+using Sol3.Standard.Infrastructure.Extensions;
 using System;
 using System.IO;
 
