@@ -1,40 +1,44 @@
-###
-### https://www.appveyor.com/docs/appveyor-yml/
-###
-
 version: 0.0.{build}
-init:
-- cmd: git config --global core.autocrlf true
 branches:
   only:
   - master
-image: Visual Studio 2017
+image: Visual Studio 2019
 configuration: Release
-notifications:
-- provider: Email
-  to:
-  - keith+build@sol3.net
-  subject: CI build 0.0.{build} failed!
-  on_build_success: true
-  on_build_failure: true
-  on_build_status_changed: true
 clone_folder: C:\sol3
 environment:
   build: '{build}'
   matrix:
-  - project_name: \src\Standard\Sol3.Standard.Infrastructure
-  - project_name: \src\Core\Sol3.Core.Infrastructure
-  - project_name: \src\Framework\Sol3.Framework.Infrastructure
+  - project_name: Sol3.Standard.Infrastructure
+    dir_name: '\src\Standard\'
+  - project_name: Sol3.Core.Infrastructure
+    dir_name: '\src\Core\'
+  - project_name: Sol3.Framework.Infrastructure
+    dir_name: '\src\Framework\'
 nuget:
   account_feed: true
   project_feed: true
 build_script:
 - pwsh: >-
-    Set-Location .\$env:project_name
+    Set-Location .\$env:dir_name\$env:project_name
 
     ./build.ps1
 
     Set-Location \
-artifacts:
-- path: '*/.nupkg'
 deploy: off
+notifications:
+- provider: Email
+  to:
+  - keith+build@sol3.net
+  subject: Appveyor CI build 0.0.{build} (event)!
+  message: Results are at https://ci.appveyor.com/project/KeithBarrows/sol3
+  on_build_success: true
+  on_build_failure: false
+  on_build_status_changed: true
+- provider: Email
+  to:
+  - keith+build@sol3.net
+  subject: Appveyor CI build 0.0.{build} failed!
+  message: Results are at https://ci.appveyor.com/project/KeithBarrows/sol3
+  on_build_success: false
+  on_build_failure: true
+  on_build_status_changed: false
