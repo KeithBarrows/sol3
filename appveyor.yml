@@ -15,16 +15,16 @@ notifications:
   to:
   - keith+build@sol3.net
   subject: CI build 0.0.{build} failed!
-  on_build_success: false
+  on_build_success: true
   on_build_failure: true
-  on_build_status_changed: false
+  on_build_status_changed: true
 clone_folder: C:\sol3
 environment:
   build: '{build}'
   matrix:
-  - project_name: Sol3.Infrastructure
-  - project_name: Sol3.Infrastructure.IoT
-  - project_name: Sol3.TestCli
+  - project_name: Sol3.Standard.Infrastructure
+  - project_name: Sol3.Core.Infrastructure
+  - project_name: Sol3.Framework.Infrastructure
 nuget:
   account_feed: true
   project_feed: true
