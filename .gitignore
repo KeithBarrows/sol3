@@ -7,10 +7,7 @@
 *.user
 *.userosscache
 *.sln.docstates
-.nuget/
 _ReSharper.*
-packages/
-artifacts/
 *.user
 *.suo
 *.userprefs
@@ -19,6 +16,13 @@ artifacts/
 *.zip
 *.dll
 *.exe
+.git/
+.nuget/
+.vs/
+.vscode/
+artifacts/
+MediaInfo.dll/
+packages/
 src_archive/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
